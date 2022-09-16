@@ -40,7 +40,7 @@ dependencies:
   archive: ^3.3.0
   event_bus: ^2.0.0
   substring_highlight: ^1.0.33
-  flutter_list_view: ^1.1.13
+  flutter_list_view: ^1.1.18
   dotted_border: ^2.0.0+2
   selector_plus:
     git: https://github.com/EaniaHuui/selector_plus.git

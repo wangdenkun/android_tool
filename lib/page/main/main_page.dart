@@ -3,6 +3,7 @@ import 'package:android_tool/page/common/base_page.dart';
 import 'package:android_tool/page/feature_page/feature_page.dart';
 import 'package:android_tool/page/flie_manager/file_manager_page.dart';
 import 'package:android_tool/page/main/devices_model.dart';
+import 'package:android_tool/page/mushi_pad_one/mushi_pad_one.dart';
 import 'package:android_tool/widget/adb_setting_dialog.dart';
 import 'package:android_tool/widget/text_view.dart';
 import 'package:desktop_drop/desktop_drop.dart';
@@ -51,6 +52,7 @@ class _MainPageState extends BasePage<MainPage, MainViewModel> {
                 _leftItem("images/ic_folder.svg", "文件管理", 2),
                 _leftItem("images/ic_log.svg", "LogCat", 3),
                 _leftItem("images/ic_settings.svg", "设置", 4),
+                _leftItem("images/ic_settings.svg", "目视一代Pad", 5),
               ],
             ),
           ),
@@ -88,10 +90,11 @@ class _MainPageState extends BasePage<MainPage, MainViewModel> {
           deviceId: viewModel.deviceId);
     } else if (value == 4) {
       return AdbSettingDialog(viewModel.adbPath);
-    } else {
+    } else if (value == 5){
+      return const MuShiPadOnePage();
+    } else{
       return Container();
     }
-    ;
   }
 
   Widget _leftItem(String image, String name, int index) {

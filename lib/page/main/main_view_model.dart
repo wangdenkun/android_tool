@@ -25,7 +25,8 @@ class MainViewModel extends BaseViewModel {
 
   String get deviceId => device?.id ?? "";
 
-  init() async {
+  Future<void> init() async {
+    doctorApkPath = await App().getDoctorApkPath();
     await checkAdb();
     if (adbPath.isNotEmpty) {
       await getDeviceList();
